@@ -11,7 +11,7 @@ const MainCard = () => {
       </div>
       <div>
         <strong>ABoS’s</strong> main core businesses are in the following items
-        <ol>
+        <ol className="list-decimal ps-4">
           <li>
             Inspection, testing and examination of lifting appliances and
             lifting gears.
