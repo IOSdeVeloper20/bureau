@@ -41,12 +41,12 @@ const AboutHeader = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-2  md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-2  lg:grid-cols-3">
         <div className="flex justify-center">
           <img
             src={Saleh}
             alt="Saleh"
-            className="md:h-3/6 lg:h-full lg:w-4/6"
+            className="lg:h-full lg:w-4/6"
           />
         </div>
 
@@ -66,12 +66,12 @@ const AboutHeader = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-2  md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-2  lg:grid-cols-3">
         <div className="flex justify-center">
           <img
             src={Abosad}
             alt="Abosad"
-            className="md:h-3/6 lg:h-full lg:w-4/6"
+            className="lg:h-full lg:w-4/6"
           />
         </div>
 

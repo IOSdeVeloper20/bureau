@@ -10,7 +10,7 @@ const AboutMiddle = () => {
           Impartiality
         </h1>
       </div>
-      <div className="col-span-12 sm:col-span-10">
+      <div className="col-span-12 lg:col-span-10">
         <p>
           <strong>Arabian Bureau of Services (ABoS)</strong> is 100% committed
           to the performance of impartial, objective inspections to inspire
