@@ -3,8 +3,8 @@ import { FaBriefcase } from "react-icons/fa6";
 const MainCard = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 bg-gray-300 rounded-3xl p-4 relative gap-3 w-11/12">
-      <div className="bg-lightBlue rounded-2xl md:rounded-3xl col-span-12 lg:col-span-2 flex flex-col justify-center items-center text-center p-2">
-        <FaBriefcase className="text-darkBlue size-7 md:size-12" />
+      <div className="bg-lightBlue rounded-2xl md:rounded-3xl col-span-12 lg:col-span-2 lg:w-5/6 flex flex-col justify-center items-center text-center p-2">
+        <FaBriefcase className="text-darkBlue size-7 md:size-10" />
         <h1 className="text-darkBlue text-base md:text-lg font-bold">
           Main Business Interest
         </h1>

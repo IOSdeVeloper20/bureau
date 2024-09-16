@@ -8,11 +8,12 @@ import Etihad from "../../Assets/Images/etihad.jpeg";
 const MainBottom = () => {
   return (
     <div className="bg-greyBackground rounded-4xl p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
-        <div className="lg:col-span-1">
-          <img src={Submarine} alt="submarine" className="rounded-3xl" />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
+        <div className="lg:col-span-1 flex flex-col items-center text-center">
+          <img src={Submarine} alt="submarine" className="rounded-3xl sm:size-4/6 md:size-3/5 lg:size-full" />
+          <h1 className="text-xl font-bold text-darkBlue pt-2">Organization</h1>
         </div>
-        <div className="text-center lg:col-span-2 lg:text-start ">
+        <div className="text-center lg:col-span-2 md:text-start ">
           <ol>
             <li>
               <strong>ABoS</strong> is continually maintaining a highly
@@ -49,7 +50,7 @@ const MainBottom = () => {
           <div className="h-1/4">
             <img src={Krane} alt="krane" className="rounded-3xl" />
           </div>{" "}
-          <h1 className="text-darkBlue font-bold pt-2">Office Facilities</h1>
+          <h1 className="text-darkBlue text-xl font-bold pt-2">Office Facilities</h1>
           <p className="text-center lg:text-start">
             <strong>ABOS’s Abu Dhabi office</strong> is located in the heart of
             the city & the operations will be handled at Mussafah offices to
@@ -65,7 +66,7 @@ const MainBottom = () => {
           <div className="h-1/4">
             <img src={GreenWroker} alt="Green Worker" className="rounded-3xl" />
           </div>
-          <h1 className="text-darkBlue font-bold pt-2">Work Experience</h1>
+          <h1 className="text-darkBlue text-xl font-bold pt-2">Work Experience</h1>
           <p className="text-center lg:text-start">
             We ABoS work with various prestigious projects with well reputed
             companies in UAE such as ADNATCO, NMDC, SMG, IMCC group (GPC, IMAC,
@@ -79,7 +80,7 @@ const MainBottom = () => {
           <div className="h-1/4">
             <img src={GreenKrane} alt="Green Krane" className="rounded-3xl" />
           </div>
-          <h1 className="text-darkBlue font-bold pt-2">Quality & HSE</h1>
+          <h1 className="text-darkBlue text-xl font-bold pt-4">Quality & HSE</h1>
           <p className="text-center lg:text-start">
             ABoS is committed with High level of standardization with Quality &
             HSE. Our Company is certified by LEEA & ENAS for our inspection
@@ -89,10 +90,10 @@ const MainBottom = () => {
         </div>
 
         <div className="text-center p-4">
-          <div className="h-40">
+          <div className="h-40 lg:h-32 xl:h-40 flex justify-center">
             <img src={Etihad} alt="Etihad" className="rounded-3xl h-full" />
           </div>
-          <h1 className="text-darkBlue font-bold pt-2">Over all highlights</h1>
+          <h1 className="text-darkBlue text-xl font-bold pt-5">Over all highlights</h1>
           <p className="text-center lg:text-start">
             We are the well-known and reputed company in UAE for the inspection
             and training activities over two decades. We have the approval with

@@ -9,7 +9,7 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         to="/"
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
-        }>
+        } >
         Company Profile
       </NavLink>
 
