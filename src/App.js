@@ -1,12 +1,11 @@
-import "./App.css";
 import About from "./Pages/About";
 import Inspections from "./Pages/Inspections";
 import Main from "./Pages/Main";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Training from "./Pages/Training";
 import Approvals from "./Pages/Approvals";
 import Gallery from "./Pages/Gallery";
 import ContactUs from "./Pages/ContactUs";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
