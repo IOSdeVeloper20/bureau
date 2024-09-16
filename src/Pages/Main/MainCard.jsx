@@ -2,16 +2,16 @@ import React from "react";
 import { FaBriefcase } from "react-icons/fa6";
 const MainCard = () => {
   return (
-    <div className="flex bg-gray-300 rounded-3xl p-4 relative gap-3 w-11/12">
-      <div className="bg-lightBlue rounded-3xl flex flex-col w-1/6 justify-center items-center text-center p-2">
-        <FaBriefcase className="text-darkBlue size-1/2" />
-        <h1 className="text-darkBlue text-lg font-bold">
+    <div className="grid grid-cols-1 md:grid-cols-12 bg-gray-300 rounded-3xl p-4 relative gap-3 w-11/12">
+      <div className="bg-lightBlue rounded-2xl md:rounded-3xl col-span-12 lg:col-span-2 flex flex-col justify-center items-center text-center p-2">
+        <FaBriefcase className="text-darkBlue size-7 md:size-12" />
+        <h1 className="text-darkBlue text-base md:text-lg font-bold">
           Main Business Interest
         </h1>
       </div>
-      <div>
-        <strong>ABoS’s</strong> main core businesses are in the following items
-        <ol className="list-decimal ps-4">
+      <div className="col-span-12 sm:col-span-10">
+        <strong>ABoS’s</strong> main core businesses are in the following items:
+        <ol className="list-decimal ps-4 pb-4">
           <li>
             Inspection, testing and examination of lifting appliances and
             lifting gears.
