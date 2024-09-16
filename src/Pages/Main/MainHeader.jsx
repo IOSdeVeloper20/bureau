@@ -10,7 +10,7 @@ const MainHeader = () => {
           <img src={yellowGas} alt="yellow gas" className="rounded-3xl" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 bg-gray-300 rounded-3xl p-4 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-12 bg-greyBackground rounded-3xl p-4 gap-3">
           <div className="bg-lightBlue rounded-2xl col-span-12 lg:col-span-2 lg:w-5/6 md:rounded-3xl p-4 flex flex-col justify-center items-center text-center">
             <FaBookBookmark className="text-darkBlue size-7 md:size-10"/>
             <h1 className="text-darkBlue text-base md:text-lg font-bold">Company Profile</h1>
