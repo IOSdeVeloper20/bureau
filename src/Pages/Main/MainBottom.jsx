@@ -8,11 +8,11 @@ import Etihad from "../../Assets/Images/etihad.jpeg";
 const MainBottom = () => {
   return (
     <div className="bg-greyBackground rounded-4xl p-4">
-      <div className="flex gap-4 items-center">
-        <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
+        <div className="lg:col-span-1">
           <img src={Submarine} alt="submarine" className="rounded-3xl" />
         </div>
-        <div>
+        <div className="text-center lg:col-span-2 lg:text-start ">
           <ol>
             <li>
               <strong>ABoS</strong> is continually maintaining a highly
@@ -44,12 +44,12 @@ const MainBottom = () => {
         </div>
       </div>
 
-      <div className="flex gap-6 justify-start items-start">
-        <div className="flex flex-col w-1/4 text-center justify-center items-center p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-start items-start">
+        <div className="text-center p-4 bg-red-200">
           <img src={Krane} alt="krane" className="rounded-3xl h-full" />
           <div>
             <h1 className="text-darkBlue font-bold pt-2">Office Facilities</h1>
-            <p>
+            <p className="text-center lg:text-start">
               <strong>ABOS’s Abu Dhabi office</strong> is located in the heart of
               the city & the operations will be handled at Mussafah offices to
               serve the clients at anytime during the business hours. The
@@ -61,14 +61,14 @@ const MainBottom = () => {
           </div>
         </div>
 
-        <div className="flex flex-col w-1/4 text-center justify-center items-center p-4">
+        <div className="text-center p-4 bg-red-200">
           <img
             src={GreenWroker}
             alt="Green Worker"
             className="rounded-3xl max-h-11/12"
           />
           <h1 className="text-darkBlue font-bold pt-2">Work Experience</h1>
-          <p>
+          <p className="text-center lg:text-start">
             We ABoS work with various prestigious projects with well reputed
             companies in UAE such as ADNATCO, NMDC, SMG, IMCC group (GPC, IMAC,
             GSME, CIC, ADCE), GS Engineering, Hyundai, Galfar Engineering, AL
@@ -77,14 +77,14 @@ const MainBottom = () => {
           </p>
         </div>
 
-        <div className="flex flex-col w-1/4 text-center justify-center items-center p-4">
+        <div className="text-center p-4 bg-red-200">
           <img
             src={GreenKrane}
             alt="Green Krane"
             className="rounded-3xl max-h-11/12"
           />
           <h1 className="text-darkBlue font-bold pt-2">Quality & HSE</h1>
-          <p>
+          <p className="text-center lg:text-start">
             ABoS is committed with High level of standardization with Quality &
             HSE. Our Company is certified by LEEA & ENAS for our inspection
             activities as per iso17020:2012 & our EHSMS system is recently
@@ -92,10 +92,10 @@ const MainBottom = () => {
           </p>
         </div>
 
-        <div className="flex flex-col w-1/4 text-center justify-center items-center p-4 bg-red-200">
+        <div className="text-center p-4 bg-red-200">
           <img src={Etihad} alt="Etihad" className="rounded-3xl" />
           <h1 className="text-darkBlue font-bold pt-2">Over all highlights</h1>
-          <p>
+          <p className="text-center lg:text-start">
             We are the well-known and reputed company in UAE for the inspection
             and training activities over two decades. We have the approval with
             ADCO, ADMA, ZADCO, TAKREER, Al HOSN GAS; GASCO; BURAGE, FERTIL, Etc.

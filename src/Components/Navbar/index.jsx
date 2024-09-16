@@ -52,7 +52,7 @@ const Navbar = () => {
           ""
         )}
       </div>
-      <div className="flex text-lightBlue justify-end items-center pe-12 pb-4">
+      <div className="flex text-lightBlue justify-end items-center pe-4 lg:pe-12 pb-4">
         <Social hoverColor={"hover:text-slate-400"}/>
       </div>
     </div>
