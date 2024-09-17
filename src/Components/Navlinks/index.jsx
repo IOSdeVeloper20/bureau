@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-//            isActive ? "text-activeLink font-bold" : "text-darkBlue"          }>
 
 const NavLinks = ({ linkActive, linkInActive }) => {
   return (

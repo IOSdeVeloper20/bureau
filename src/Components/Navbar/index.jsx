@@ -33,7 +33,7 @@ const Navbar = () => {
   
         <div className="w-3/4 justify-evenly items-center hidden xl:flex">
           <NavLinks
-            linkActive={"text-activeLink font-bold"}
+            linkActive={"text-activeLink font-black"}
             linkInActive={"text-darkBlue"}
           />
         </div>
