@@ -10,7 +10,7 @@ const InspectionsMiddle = () => {
         {/* left text column */}
         <div className="col-span-2">
           <div className="bg-lightBlue rounded-2xl p-4 flex justify-center items-center gap-4 text-darkBlue">
-            <FaBookBookmark className="size-7 md:size-10"/>
+            <FaBookBookmark className="size-7 md:size-12"/>
             <h1 className=" text-xs md:text-lg lg:text-3xl font-bold">TESTING, INSPECTION, & <br /> CERTIFICATION SERVICES</h1>
           </div>
           <div className="py-2 text-sm lg:text-base font-medium">

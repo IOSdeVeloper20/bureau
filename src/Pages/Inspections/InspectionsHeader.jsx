@@ -5,8 +5,8 @@ const InspectionsHeader = () => {
   return (
     <div className="bg-greyBackground rounded-4xl flex flex-col justify-center items-center">
       <div className="w-11/12 flex flex-col justify-center items-center">
-        <div>
-          <img src={GreenKrane} alt="yellow gas" className="rounded-3xl" />
+        <div className="w-full">
+          <img src={GreenKrane} alt="yellow gas" className="rounded-3xl lg:h-screen w-full" />
         </div>
 
         <div className="bg-darkGrey rounded-3xl p-4 gap-3 w-11/12">
