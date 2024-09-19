@@ -42,7 +42,7 @@ const GalleryBody = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-4">
         <div className="text-center">
           <img src={Ship} alt="Ship" className="rounded-3xl aspect-square" />
-          <h1 className="text-x pt-4 md:text-base md:font-bold">
+          <h1 className="text-xs pt-4 md:text-base md:font-bold">
             ADNOC Vessel embarkation ladder load testing
           </h1>
         </div>
