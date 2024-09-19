@@ -42,7 +42,6 @@ const ContactUsBody = () => {
             className="w-full h-full"
             style={{ border: 0 }}
             allowFullScreen
-            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
@@ -81,7 +80,6 @@ const ContactUsBody = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116318.72081260144!2d54.31041709726561!3d24.347885100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4045b74b9693%3A0x908f6786e793e677!2sArabian%20Bureau%20of%20Services!5e0!3m2!1sen!2seg!4v1726663910914!5m2!1sen!2seg"
             style={{ style: 0 }}
             allowFullScreen
-            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
