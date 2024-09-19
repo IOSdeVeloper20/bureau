@@ -5,8 +5,20 @@ const InspectionsHeader = () => {
   return (
     <div className="bg-greyBackground rounded-4xl flex flex-col justify-center items-center">
       <div className="w-11/12 flex flex-col justify-center items-center">
-        <div className="w-full">
-          <img src={GreenKrane} alt="yellow gas" className="rounded-3xl lg:h-screen w-full" />
+        <div className="w-full relative">
+          <img
+            src={GreenKrane}
+            alt="yellow gas"
+            className="rounded-3xl lg:h-screen w-full"
+          />
+          <div className="absolute top-6 left-3 lg:left-8">
+            <h1 className="text-white text-xs lg:text-4xl font-bold">
+              INDUSTRY EXPERTS IN
+              <br /> KEEPING OUR CUSTOMERS
+              <br />
+              SAFE & COMPLIANT
+            </h1>
+          </div>
         </div>
 
         <div className="bg-darkGrey rounded-3xl p-4 gap-3 w-11/12">

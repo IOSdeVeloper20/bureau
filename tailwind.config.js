@@ -12,6 +12,7 @@ module.exports = {
         activeLink: "#777777",
         whiteTitle: "#ffffff",
         blackTitle: "#000000",
+        greenTitle: "#203908",
       },
       borderRadius: {
         "4xl": "3.5rem", // Customize this value as needed
