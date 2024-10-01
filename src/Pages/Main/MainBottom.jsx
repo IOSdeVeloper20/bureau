@@ -4,42 +4,70 @@ import Krane from "../../Assets/Images/krane.jpeg";
 import GreenWroker from "../../Assets/Images/green worker.jpeg";
 import GreenKrane from "../../Assets/Images/green_crane.png";
 import Etihad from "../../Assets/Images/etihad.jpeg";
+import { FaRegEdit } from "react-icons/fa";
+import { handleUpdating } from "../../Helpers/Updating";
 
-const MainBottom = () => {
+const MainBottom = ({ mainData, user, fetchMainData }) => {
   return (
     <div className="bg-greyBackground rounded-t-4xl p-4">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
         <div className="lg:col-span-1 flex flex-col items-center text-center">
-          <img src={Submarine} alt="submarine" className="rounded-3xl sm:size-4/6 md:size-3/5 lg:size-full" />
+          <img
+            src={Submarine}
+            alt="submarine"
+            className="rounded-3xl sm:size-4/6 md:size-3/5 lg:size-full"
+          />
           <h1 className="text-xl font-bold text-darkBlue pt-2">Organization</h1>
         </div>
         <div className="text-center lg:col-span-2 md:text-start ">
           <ol>
-            <li>
-              <strong>ABoS</strong> is continually maintaining a highly
-              qualified inspection and consultancy team, employing the latest
-              technical expertise and paraphernalia, stressing utmost importance
-              in safety, environment, quality, and timely completion task, and
-              complying with all local & international regulations.
+            <li className="relative">
+              {mainData[9]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "mainData",
+                      mainData[9]?.id,
+                      "",
+                      fetchMainData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-1 text-red-500"
+                />
+              )}
             </li>
-            <li className="py-4">
-              <strong>ABoS</strong> is continually maintaining a highly
-              qualified inspection and consultancy team, employing the latest
-              technical expertise and paraphernalia, stressing utmost importance
-              in safety, environment, quality, and timely completion task, and
-              complying with all local & international regulations.
+            <li className="py-4 relative">
+              {mainData[10]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "mainData",
+                      mainData[10]?.id,
+                      "",
+                      fetchMainData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-1 text-red-500"
+                />
+              )}
             </li>
-
-            <li>
-              <strong>ABOS</strong> is providing inspection services according
-              to proven methods for inspection based on guidelines and Standard
-              Operating Procedure. The Inspection and consultancy team is well
-              organized by our Technical Manager & Training Manager and doing
-              the task as per his authorization. is providing inspection
-              services according to proven methods for inspection based on
-              guidelines and Standard Operating Procedure. The Inspection and
-              consultancy team is well organized by our Technical Manager &
-              Training Manager and doing the task as per his authorization.
+            <li className="relative">
+              {mainData[11]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "mainData",
+                      mainData[11]?.id,
+                      "",
+                      fetchMainData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-1 text-red-500"
+                />
+              )}
             </li>
           </ol>
         </div>
@@ -49,16 +77,25 @@ const MainBottom = () => {
         <div className="text-center p-4">
           <div className="h-1/4">
             <img src={Krane} alt="krane" className="rounded-3xl" />
-          </div>{" "}
-          <h1 className="text-darkBlue text-xl font-bold pt-2">Office Facilities</h1>
-          <p className="text-center lg:text-start">
-            <strong>ABOS’s Abu Dhabi office</strong> is located in the heart of
-            the city & the operations will be handled at Mussafah offices to
-            serve the clients at anytime during the business hours. The
-            communication between the departments and personals are established
-            through phone, e-mails, & verbal conversations.All the Certificates
-            and reports are generated by the engineers to avoid delays & errors
-            to ensure the trust of the customer
+          </div>
+          <h1 className="text-darkBlue text-xl font-bold pt-2">
+            Office Facilities
+          </h1>
+          <p className="text-center lg:text-start relative">
+            {mainData[12]?.text}
+            {user && (
+              <FaRegEdit
+                onClick={() =>
+                  handleUpdating(
+                    "mainData",
+                    mainData[12]?.id,
+                    "",
+                    fetchMainData
+                  )
+                }
+                className="absolute hidden lg:inline-block top-0 right-0 text-red-500"
+              />
+            )}
           </p>
         </div>
 
@@ -66,13 +103,24 @@ const MainBottom = () => {
           <div className="h-1/4">
             <img src={GreenWroker} alt="Green Worker" className="rounded-3xl" />
           </div>
-          <h1 className="text-darkBlue text-xl font-bold pt-2">Work Experience</h1>
-          <p className="text-center lg:text-start">
-            We ABoS work with various prestigious projects with well reputed
-            companies in UAE such as ADNATCO, NMDC, SMG, IMCC group (GPC, IMAC,
-            GSME, CIC, ADCE), GS Engineering, Hyundai, Galfar Engineering, AL
-            Sahraa. We can listed various projects which we handled by us on
-            request
+          <h1 className="text-darkBlue text-xl font-bold pt-2">
+            Work Experience
+          </h1>
+          <p className="text-center lg:text-start relative">
+            {mainData[13]?.text}
+            {user && (
+              <FaRegEdit
+                onClick={() =>
+                  handleUpdating(
+                    "mainData",
+                    mainData[13]?.id,
+                    "",
+                    fetchMainData
+                  )
+                }
+                className="absolute hidden lg:inline-block top-0 right-0 text-red-500"
+              />
+            )}
           </p>
         </div>
 
@@ -80,12 +128,24 @@ const MainBottom = () => {
           <div className="h-1/4">
             <img src={GreenKrane} alt="Green Krane" className="rounded-3xl" />
           </div>
-          <h1 className="text-darkBlue text-xl font-bold pt-4">Quality & HSE</h1>
-          <p className="text-center lg:text-start">
-            ABoS is committed with High level of standardization with Quality &
-            HSE. Our Company is certified by LEEA & ENAS for our inspection
-            activities as per iso17020:2012 & our EHSMS system is recently
-            certified by RINA Services for ISO14001:2004: ISO 18001:2007.
+          <h1 className="text-darkBlue text-xl font-bold pt-4">
+            Quality & HSE
+          </h1>
+          <p className="text-center lg:text-start relative">
+            {mainData[14]?.text}
+            {user && (
+              <FaRegEdit
+                onClick={() =>
+                  handleUpdating(
+                    "mainData",
+                    mainData[14]?.id,
+                    "",
+                    fetchMainData
+                  )
+                }
+                className="absolute hidden lg:inline-block top-0 right-0 text-red-500"
+              />
+            )}
           </p>
         </div>
 
@@ -93,11 +153,24 @@ const MainBottom = () => {
           <div className="h-40 lg:h-32 xl:h-40 flex justify-center">
             <img src={Etihad} alt="Etihad" className="rounded-3xl h-full" />
           </div>
-          <h1 className="text-darkBlue text-xl font-bold pt-5">Over all highlights</h1>
-          <p className="text-center lg:text-start">
-            We are the well-known and reputed company in UAE for the inspection
-            and training activities over two decades. We have the approval with
-            ADCO, ADMA, ZADCO, TAKREER, Al HOSN GAS; GASCO; BURAGE, FERTIL, Etc.
+          <h1 className="text-darkBlue text-xl font-bold pt-5">
+            Over all highlights
+          </h1>
+          <p className="text-center lg:text-start relative">
+            {mainData[15]?.text}
+            {user && (
+              <FaRegEdit
+                onClick={() =>
+                  handleUpdating(
+                    "mainData",
+                    mainData[15]?.id,
+                    "",
+                    fetchMainData
+                  )
+                }
+                className="absolute hidden lg:inline-block top-0 right-0 text-red-500"
+              />
+            )}
           </p>
         </div>
       </div>

@@ -1,7 +1,9 @@
 import React from "react";
 import GreenKrane from "../../Assets/Images/green_crane.png";
+import { FaRegEdit } from "react-icons/fa";
+import { handleUpdating } from "../../Helpers/Updating";
 
-const InspectionsHeader = () => {
+const InspectionsHeader = ({ inspectionsData, user, fetchInspectionData }) => {
   return (
     <div className="bg-greyBackground rounded-4xl flex flex-col justify-center items-center">
       <div className="w-11/12 flex flex-col justify-center items-center">
@@ -22,19 +24,21 @@ const InspectionsHeader = () => {
         </div>
 
         <div className="bg-darkGrey rounded-3xl p-4 gap-3 w-11/12">
-          <p className="col-span-12 text-sm lg:text-base">
-            Arabian Bureau Of Services established in 1993 and providing
-            Engineering Testing, Inspection, Certification of Lifting Equipment,
-            and Training Services. Our objective is to keep our customers both
-            safe and compliant with the relevant legislation and standards.
-            Arabian Bureau Of Services are experts in both keeping
-            customer-owned equipment and people both safe and compliant within
-            the workplace. Equipment in the workplace includes lifting
-            accessories and equipment, plant and access equipment, pressure
-            systems, working platforms, fall protections and local exhaust
-            ventilation systems. Our Electrical Testing division provides
-            Electrical Testing, Fixed Wire Testing, and other electrical testing
-            services.
+          <p className="col-span-12 text-sm lg:text-base relative">
+            {inspectionsData[0]?.text}
+            {user && (
+              <FaRegEdit
+                onClick={() =>
+                  handleUpdating(
+                    "inspectionsData",
+                    inspectionsData[0]?.id,
+                    "",
+                    fetchInspectionData
+                  )
+                }
+                className="absolute hidden lg:inline-block right-0 bottom-0 text-red-500"
+              />
+            )}
           </p>
         </div>
       </div>

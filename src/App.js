@@ -5,6 +5,7 @@ import Training from "./Pages/Training";
 import Approvals from "./Pages/Approvals";
 import Gallery from "./Pages/Gallery";
 import ContactUs from "./Pages/ContactUs";
+import Login from "./Pages/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Approvals" element={<Approvals />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </Router>
   );

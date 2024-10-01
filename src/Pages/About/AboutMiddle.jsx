@@ -1,25 +1,46 @@
 import React from "react";
 import { BiSolidSpreadsheet } from "react-icons/bi";
+import { FaRegEdit } from "react-icons/fa";
+import { handleUpdating } from "../../Helpers/Updating";
 
-const AboutMiddle = () => {
+const AboutMiddle = ({ aboutData, user, fetchAboutData }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 rounded-3xl p-4 gap-3 w-11/12">
       <div className="bg-lightBlue rounded-2xl md:rounded-3xl col-span-12 lg:col-span-2 lg:w-5/6 flex flex-col justify-center items-center text-center p-2">
         <BiSolidSpreadsheet className="text-darkBlue size-7 md:size-10" />
-        <h1 className="text-darkBlue text-base md:text-lg font-bold">
-          Impartiality
+        <h1 className="text-darkBlue text-base md:text-lg font-bold relative">
+          {aboutData[6]?.text}
+          {user && (
+            <FaRegEdit
+              onClick={() =>
+                handleUpdating(
+                  "aboutData",
+                  aboutData[6]?.id,
+                  "",
+                  fetchAboutData
+                )
+              }
+              className="absolute hidden lg:block right-9 text-red-500"
+            />
+          )}
         </h1>
       </div>
-      <div className="col-span-12 lg:col-span-10">
+      <div className="col-span-12 lg:col-span-10 relative">
         <p>
-          <strong>Arabian Bureau of Services (ABoS)</strong> is 100% committed
-          to the performance of impartial, objective inspections to inspire
-          confidence in our business and the industry. We undertake not to
-          engage in any activities that may conflict with our independence of
-          judgment and integrity in relation to our inspection activities In
-          particular ABoS shall not be engaged in the design, manufacture,
-          supply, installation, purchase, ownership, use or maintenance of the
-          items inspected.
+          {aboutData[7]?.text}
+          {user && (
+            <FaRegEdit
+              onClick={() =>
+                handleUpdating(
+                  "aboutData",
+                  aboutData[7]?.id,
+                  "",
+                  fetchAboutData
+                )
+              }
+              className="absolute hidden lg:inline-block right-2 bottom-2 text-red-500"
+            />
+          )}
         </p>
       </div>
     </div>

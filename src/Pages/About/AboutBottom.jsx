@@ -1,67 +1,181 @@
 import React from "react";
 import KraneSeaPort from "../../Assets/Images/crane-seaport.png";
 import { BiSolidLockOpenAlt } from "react-icons/bi";
+import { FaRegEdit } from "react-icons/fa";
+import { handleUpdating } from "../../Helpers/Updating";
 
-const AboutBottom = () => {
+const AboutBottom = ({ aboutData, user, fetchAboutData }) => {
   return (
     <div className="bg-greyBackground flex justify-center rounded-t-4xl p-4">
       <div className="w-11/12 flex flex-col gap-4">
         <div className="flex grid-cols-1 gap-4 items-center">
-          <BiSolidLockOpenAlt className="size-9 lg:size-10"/>
-          <h1 className="text-lg font-extrabold lg:text-2xl lg:font-bold">Obligations of Confidentiality</h1>
+          <BiSolidLockOpenAlt className="size-9 lg:size-10" />
+          <h1 className="text-lg font-extrabold lg:text-2xl lg:font-bold relative">
+            {aboutData[8]?.title}
+            {user && (
+              <FaRegEdit
+                onClick={() =>
+                  handleUpdating(
+                    "aboutData",
+                    aboutData[8]?.id,
+                    "",
+                    fetchAboutData
+                  )
+                }
+                className="absolute hidden lg:block right-0 text-base text-red-500"
+              />
+            )}
+          </h1>
         </div>
-  
+
         <div className="grid grid-cols-1 lg:mt-4">
-          <strong className="w-full lg:w-9/12">
-            In consideration of Confidential Information being made available to
-            the Arabian Bureau of Services by our clients and/or its
-            agents,Arabian Bureau of Services agrees and undertakes that it shall:
+          <strong className="w-full lg:w-9/12 relative">
+            {aboutData[9]?.text}
+            {user && (
+              <FaRegEdit
+                onClick={() =>
+                  handleUpdating(
+                    "aboutData",
+                    aboutData[9]?.id,
+                    "",
+                    fetchAboutData
+                  )
+                }
+                className="absolute hidden lg:inline-block right-0 bottom-1 text-base text-red-500"
+              />
+            )}
           </strong>
         </div>
-  
+
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <ul className="list-disc ps-6 col-span-1">
-            <li>
-              Only use the Confidential Information in relation to work pertaining
-              to the Services.
+            <li className={"relative"}>
+              {aboutData[10]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "aboutData",
+                      aboutData[10]?.id,
+                      "",
+                      fetchAboutData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-0 text-base text-red-500"
+                />
+              )}
             </li>
-            <li>
-              Not without the client’s prior specific written approval, divulge,
-              disclose or reveal the Confidential Information to any third party.
+            <li className={"relative"}>
+              {aboutData[11]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "aboutData",
+                      aboutData[11]?.id,
+                      "",
+                      fetchAboutData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-0 text-base text-red-500"
+                />
+              )}
             </li>
-            <li>
-              Treat the Confidential Information as strictly confidential and with
-              no less than the same care as the Client uses to protect its own
-              Confidential Information.
+            <li className={"relative"}>
+              {aboutData[12]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "aboutData",
+                      aboutData[12]?.id,
+                      "",
+                      fetchAboutData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-0 text-base text-red-500"
+                />
+              )}
             </li>
-            <li>
-              Not make copies in any form of any documents containing the
-              Confidential Information, unless essential to the performance of the
-              Services.
+            <li className={"relative"}>
+              {aboutData[13]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "aboutData",
+                      aboutData[13]?.id,
+                      "",
+                      fetchAboutData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-0 text-base text-red-500"
+                />
+              )}
             </li>
-            <li>
-              Shall not advertise or publicly announce, communicate or circulate
-              the existence of any agreement or the fact that we are providing
-              services to any client, without the prior written consent of the
-              client.
+            <li className={"relative"}>
+              {aboutData[14]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "aboutData",
+                      aboutData[14]?.id,
+                      "",
+                      fetchAboutData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-0 text-base text-red-500"
+                />
+              )}
             </li>
-            <li>
-              <strong>ABOS</strong> shall inform the client in advance of any
-              information. <br />
-              <strong>ABOS</strong> intends to place it in public domain. Except
-              for information that the client makes publicly available or when
-              agreed between ABOS and the clients.
+            <li className={"relative"}>
+              {aboutData[15]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "aboutData",
+                      aboutData[15]?.id,
+                      "",
+                      fetchAboutData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-0 text-base text-red-500"
+                />
+              )}
             </li>
-            <li>
-              When the inspection body is required by law or authorized by
-              contractual commitments to release confidential information, the
-              client or individual concerned shall, unless prohibited by law, be
-              notified of the information provided.
+            <li className={"relative"}>
+              {aboutData[16]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "aboutData",
+                      aboutData[16]?.id,
+                      "",
+                      fetchAboutData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-0 text-base text-red-500"
+                />
+              )}
             </li>
-            <li>
-              Information about the client obtained from sources other than the
-              client (e.g. complainant, regulators) shall be treated as
-              confidential.
+            <li className={"relative"}>
+              {aboutData[17]?.text}
+              {user && (
+                <FaRegEdit
+                  onClick={() =>
+                    handleUpdating(
+                      "aboutData",
+                      aboutData[17]?.id,
+                      "",
+                      fetchAboutData
+                    )
+                  }
+                  className="absolute hidden lg:inline-block right-0 bottom-0 text-base text-red-500"
+                />
+              )}
             </li>
           </ul>
           <img src={KraneSeaPort} alt="Krane SeaPort" className="col-span-1" />

@@ -33,7 +33,7 @@ const Navbar = () => {
   
         <div className="w-3/4 justify-evenly items-center hidden xl:flex">
           <NavLinks
-            linkActive={"text-activeLink font-black"}
+            linkActive={"font-black"}
             linkInActive={"text-darkBlue"}
           />
         </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
   
         {isOpen ? (
           <div className="w-full flex flex-col items-center gap-2">
-            <NavLinks />
+            <NavLinks linkActive={"font-bold"}/>
           </div>
         ) : (
           ""
