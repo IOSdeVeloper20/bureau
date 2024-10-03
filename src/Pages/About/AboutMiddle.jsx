@@ -1,7 +1,6 @@
 import React from "react";
 import { BiSolidSpreadsheet } from "react-icons/bi";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const AboutMiddle = ({ aboutData, user, fetchAboutData }) => {
   return (
@@ -11,16 +10,10 @@ const AboutMiddle = ({ aboutData, user, fetchAboutData }) => {
         <h1 className="text-darkBlue text-base md:text-lg font-bold relative">
           {aboutData[6]?.text}
           {user && (
-            <FaRegEdit
-              onClick={() =>
-                handleUpdating(
-                  "aboutData",
-                  aboutData[6]?.id,
-                  "",
-                  fetchAboutData
-                )
-              }
-              className="absolute hidden lg:block right-9 text-red-500"
+            <EditModal
+              fileName="aboutData"
+              id={aboutData[6]?.id}
+              refetchData={fetchAboutData}
             />
           )}
         </h1>
@@ -29,16 +22,10 @@ const AboutMiddle = ({ aboutData, user, fetchAboutData }) => {
         <p>
           {aboutData[7]?.text}
           {user && (
-            <FaRegEdit
-              onClick={() =>
-                handleUpdating(
-                  "aboutData",
-                  aboutData[7]?.id,
-                  "",
-                  fetchAboutData
-                )
-              }
-              className="absolute hidden lg:inline-block right-2 bottom-2 text-red-500"
+            <EditModal
+              fileName="aboutData"
+              id={aboutData[7]?.id}
+              refetchData={fetchAboutData}
             />
           )}
         </p>

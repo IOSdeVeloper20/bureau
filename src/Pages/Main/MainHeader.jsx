@@ -1,8 +1,7 @@
 import React from "react";
 import yellowGas from "../../Assets/Images/yellow_gas.jpeg";
 import { FaBookBookmark } from "react-icons/fa6";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const MainHeader = ({ mainData, user, fetchMainData }) => {
   return (
@@ -26,16 +25,10 @@ const MainHeader = ({ mainData, user, fetchMainData }) => {
             <h1 className="text-darkBlue text-base md:text-lg font-bold relative">
               {mainData[0]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "mainData",
-                      mainData[0]?.id,
-                      "Company Profile",
-                      fetchMainData
-                    )
-                  }
-                  className="absolute hidden lg:block right-10 text-red-500 cursor-pointer"
+                <EditModal
+                  fileName="mainData"
+                  id={mainData[0]?.id}
+                  refetchData={fetchMainData}
                 />
               )}
             </h1>
@@ -43,11 +36,10 @@ const MainHeader = ({ mainData, user, fetchMainData }) => {
           <p className="col-span-12 lg:col-span-10 relative">
             {mainData[1]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating("mainData",mainData[1]?.id, "", fetchMainData)
-                }
-                className="absolute hidden lg:inline-block right-10 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[1]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </p>

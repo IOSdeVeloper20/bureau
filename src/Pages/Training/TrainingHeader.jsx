@@ -1,7 +1,6 @@
 import React from "react";
 import Scaffolding from "../../Assets/Images/scaffolding.jpeg";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const TrainingTop = ({ trainingData, user, fetchTrainingData }) => {
   return (
@@ -25,16 +24,10 @@ const TrainingTop = ({ trainingData, user, fetchTrainingData }) => {
           <p className="col-span-12 text-sm lg:text-base relative">
             {trainingData[0]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "trainingData",
-                    trainingData[0]?.id,
-                    "",
-                    fetchTrainingData
-                  )
-                }
-                className="absolute hidden lg:inline-block right-0 bottom-0 text-red-500"
+              <EditModal
+                fileName="trainingData"
+                id={trainingData[0]?.id}
+                refetchData={fetchTrainingData}
               />
             )}
           </p>

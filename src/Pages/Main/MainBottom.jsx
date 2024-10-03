@@ -4,8 +4,7 @@ import Krane from "../../Assets/Images/krane.jpeg";
 import GreenWroker from "../../Assets/Images/green worker.jpeg";
 import GreenKrane from "../../Assets/Images/green_crane.png";
 import Etihad from "../../Assets/Images/etihad.jpeg";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const MainBottom = ({ mainData, user, fetchMainData }) => {
   return (
@@ -24,48 +23,30 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
             <li className="relative">
               {mainData[9]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "mainData",
-                      mainData[9]?.id,
-                      "",
-                      fetchMainData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 bottom-1 text-red-500"
+                <EditModal
+                  fileName="mainData"
+                  id={mainData[9]?.id}
+                  refetchData={fetchMainData}
                 />
               )}
             </li>
             <li className="py-4 relative">
               {mainData[10]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "mainData",
-                      mainData[10]?.id,
-                      "",
-                      fetchMainData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 bottom-1 text-red-500"
+                <EditModal
+                  fileName="mainData"
+                  id={mainData[10]?.id}
+                  refetchData={fetchMainData}
                 />
               )}
             </li>
             <li className="relative">
               {mainData[11]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "mainData",
-                      mainData[11]?.id,
-                      "",
-                      fetchMainData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 bottom-1 text-red-500"
+                <EditModal
+                  fileName="mainData"
+                  id={mainData[11]?.id}
+                  refetchData={fetchMainData}
                 />
               )}
             </li>
@@ -84,16 +65,10 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
           <p className="text-center lg:text-start relative">
             {mainData[12]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "mainData",
-                    mainData[12]?.id,
-                    "",
-                    fetchMainData
-                  )
-                }
-                className="absolute hidden lg:inline-block top-0 right-0 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[12]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </p>
@@ -109,16 +84,10 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
           <p className="text-center lg:text-start relative">
             {mainData[13]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "mainData",
-                    mainData[13]?.id,
-                    "",
-                    fetchMainData
-                  )
-                }
-                className="absolute hidden lg:inline-block top-0 right-0 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[13]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </p>
@@ -134,16 +103,10 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
           <p className="text-center lg:text-start relative">
             {mainData[14]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "mainData",
-                    mainData[14]?.id,
-                    "",
-                    fetchMainData
-                  )
-                }
-                className="absolute hidden lg:inline-block top-0 right-0 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[14]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </p>
@@ -159,16 +122,10 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
           <p className="text-center lg:text-start relative">
             {mainData[15]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "mainData",
-                    mainData[15]?.id,
-                    "",
-                    fetchMainData
-                  )
-                }
-                className="absolute hidden lg:inline-block top-0 right-0 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[15]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </p>

@@ -1,7 +1,6 @@
 import React from "react";
 import BlueWorker from "../../Assets/Images/blue_worker.jpeg";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const TrainingMiddle = ({ trainingData, user, fetchTrainingData }) => {
   return (
@@ -12,32 +11,20 @@ const TrainingMiddle = ({ trainingData, user, fetchTrainingData }) => {
           <p className="relative">
             {trainingData[1]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "trainingData",
-                    trainingData[1]?.id,
-                    "",
-                    fetchTrainingData
-                  )
-                }
-                className="absolute hidden lg:inline-block right-0 bottom-0 text-red-500"
+              <EditModal
+                fileName="trainingData"
+                id={trainingData[1]?.id}
+                refetchData={fetchTrainingData}
               />
             )}
           </p>
           <p className="py-4 relative">
             {trainingData[2]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "trainingData",
-                    trainingData[2]?.id,
-                    "",
-                    fetchTrainingData
-                  )
-                }
-                className="absolute hidden lg:inline-block right-0 top-5 text-red-500"
+              <EditModal
+                fileName="trainingData"
+                id={trainingData[2]?.id}
+                refetchData={fetchTrainingData}
               />
             )}
           </p>
@@ -47,112 +34,70 @@ const TrainingMiddle = ({ trainingData, user, fetchTrainingData }) => {
             <li className={"relative"}>
               {trainingData[3]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "trainingData",
-                      trainingData[3]?.id,
-                      "",
-                      fetchTrainingData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 text-red-500"
+                <EditModal
+                  fileName="trainingData"
+                  id={trainingData[3]?.id}
+                  refetchData={fetchTrainingData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {trainingData[4]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "trainingData",
-                      trainingData[4]?.id,
-                      "",
-                      fetchTrainingData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 text-red-500"
+                <EditModal
+                  fileName="trainingData"
+                  id={trainingData[4]?.id}
+                  refetchData={fetchTrainingData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {trainingData[5]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "trainingData",
-                      trainingData[5]?.id,
-                      "",
-                      fetchTrainingData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 text-red-500"
+                <EditModal
+                  fileName="trainingData"
+                  id={trainingData[5]?.id}
+                  refetchData={fetchTrainingData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {trainingData[6]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "trainingData",
-                      trainingData[6]?.id,
-                      "",
-                      fetchTrainingData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 text-red-500"
+                <EditModal
+                  fileName="trainingData"
+                  id={trainingData[6]?.id}
+                  refetchData={fetchTrainingData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {trainingData[7]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "trainingData",
-                      trainingData[7]?.id,
-                      "",
-                      fetchTrainingData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 text-red-500"
+                <EditModal
+                  fileName="trainingData"
+                  id={trainingData[7]?.id}
+                  refetchData={fetchTrainingData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {trainingData[8]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "trainingData",
-                      trainingData[8]?.id,
-                      "",
-                      fetchTrainingData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 text-red-500"
+                <EditModal
+                  fileName="trainingData"
+                  id={trainingData[8]?.id}
+                  refetchData={fetchTrainingData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {trainingData[9]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "trainingData",
-                      trainingData[9]?.id,
-                      "",
-                      fetchTrainingData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 text-red-500"
+                <EditModal
+                  fileName="trainingData"
+                  id={trainingData[9]?.id}
+                  refetchData={fetchTrainingData}
                 />
               )}
             </li>

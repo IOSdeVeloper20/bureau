@@ -1,7 +1,6 @@
 import React from "react";
 import GreenKrane from "../../Assets/Images/green_crane.png";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const InspectionsHeader = ({ inspectionsData, user, fetchInspectionData }) => {
   return (
@@ -27,16 +26,10 @@ const InspectionsHeader = ({ inspectionsData, user, fetchInspectionData }) => {
           <p className="col-span-12 text-sm lg:text-base relative">
             {inspectionsData[0]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "inspectionsData",
-                    inspectionsData[0]?.id,
-                    "",
-                    fetchInspectionData
-                  )
-                }
-                className="absolute hidden lg:inline-block right-0 bottom-0 text-red-500"
+              <EditModal
+                fileName="inspectionsData"
+                id={inspectionsData[0]?.id}
+                refetchData={fetchInspectionData}
               />
             )}
           </p>

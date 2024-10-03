@@ -1,8 +1,7 @@
 import React from "react";
 import Boxing from "../../Assets/Images/boxing.jpeg";
 import { FaBookBookmark } from "react-icons/fa6";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const InspectionsMiddle = ({ inspectionsData, user, fetchInspectionData }) => {
   return (
@@ -16,16 +15,10 @@ const InspectionsMiddle = ({ inspectionsData, user, fetchInspectionData }) => {
             <h1 className=" text-xs md:text-lg lg:text-3xl font-bold lg:max-w-sm relative">
               {inspectionsData[1]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[1]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 top-0 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[1]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </h1>
@@ -33,16 +26,10 @@ const InspectionsMiddle = ({ inspectionsData, user, fetchInspectionData }) => {
           <div className="py-2 text-sm lg:text-base font-medium relative">
             {inspectionsData[2]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "inspectionsData",
-                    inspectionsData[2]?.id,
-                    "",
-                    fetchInspectionData
-                  )
-                }
-                className="absolute hidden lg:inline-block right-0 top-0 text-red-500"
+              <EditModal
+                fileName="inspectionsData"
+                id={inspectionsData[2]?.id}
+                refetchData={fetchInspectionData}
               />
             )}
           </div>
@@ -65,80 +52,50 @@ const InspectionsMiddle = ({ inspectionsData, user, fetchInspectionData }) => {
             <li className={"relative"}>
               {inspectionsData[3]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[3]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-5 top-0 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[3]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {inspectionsData[4]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[4]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-5 top-0 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[4]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {inspectionsData[5]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[5]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-5 top-0 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[5]?.id}
+                  refetchData={fetchInspectionData}
                 />
-              )}{" "}
+              )}
             </li>
             <li className={"relative"}>
               {inspectionsData[6]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[6]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-5 top-0 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[6]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {inspectionsData[7]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[7]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-5 top-0 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[7]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </li>
@@ -150,64 +107,40 @@ const InspectionsMiddle = ({ inspectionsData, user, fetchInspectionData }) => {
             <li className={"relative"}>
               {inspectionsData[8]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[8]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 top-2 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[8]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {inspectionsData[9]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[9]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 top-2 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[9]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {inspectionsData[10]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[10]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-[-25px] top-1 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[10]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </li>
             <li className={"relative"}>
               {inspectionsData[11]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "inspectionsData",
-                      inspectionsData[11]?.id,
-                      "",
-                      fetchInspectionData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 top-2 text-red-500 text-base"
+                <EditModal
+                  fileName="inspectionsData"
+                  id={inspectionsData[11]?.id}
+                  refetchData={fetchInspectionData}
                 />
               )}
             </li>

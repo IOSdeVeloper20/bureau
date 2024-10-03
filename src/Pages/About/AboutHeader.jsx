@@ -3,8 +3,7 @@ import Shipment from "../../Assets/Images/shipment.jpeg";
 import Saleh from "../../Assets/Images/saleh.jpeg";
 import Abosad from "../../Assets/Images/abosad.png";
 import { FaBookBookmark } from "react-icons/fa6";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
   return (
@@ -16,16 +15,10 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
             <h1 className="text-darkBlue text-base md:text-lg font-bold relative">
               {aboutData[0]?.text}
               {user && (
-                <FaRegEdit
-                  onClick={() =>
-                    handleUpdating(
-                      "aboutData",
-                      aboutData[0]?.id,
-                      "Company Profile",
-                      fetchAboutData
-                    )
-                  }
-                  className="absolute hidden lg:inline-block right-0 bottom-1 text-red-500"
+                <EditModal
+                  fileName="aboutData"
+                  id={aboutData[0]?.id}
+                  refetchData={fetchAboutData}
                 />
               )}
             </h1>
@@ -35,16 +28,10 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
           <p>
             {aboutData[1]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "aboutData",
-                    aboutData[1]?.id,
-                    "",
-                    fetchAboutData
-                  )
-                }
-                className="absolute hidden lg:inline-block right-0 top-0 text-red-500"
+              <EditModal
+                fileName="aboutData"
+                id={aboutData[1]?.id}
+                refetchData={fetchAboutData}
               />
             )}
           </p>
@@ -68,16 +55,10 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
           <p className="text-2xl lg:text-3xl relative">
             {aboutData[2]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "aboutData",
-                    aboutData[2]?.id,
-                    "",
-                    fetchAboutData
-                  )
-                }
-                className="absolute hidden lg:block right-0 text-red-500 text-base"
+              <EditModal
+                fileName="aboutData"
+                id={aboutData[2]?.id}
+                refetchData={fetchAboutData}
               />
             )}
           </p>
@@ -86,16 +67,10 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
         <p className="ps-2 md:p-0 relative">
           {aboutData[3]?.text}
           {user && (
-            <FaRegEdit
-              onClick={() =>
-                handleUpdating(
-                  "aboutData",
-                  aboutData[3]?.id,
-                  "",
-                  fetchAboutData
-                )
-              }
-              className="absolute hidden lg:inline-block right-2 text-red-500"
+            <EditModal
+              fileName="aboutData"
+              id={aboutData[3]?.id}
+              refetchData={fetchAboutData}
             />
           )}
         </p>
@@ -111,16 +86,10 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
           <p className="text-2xl lg:text-3xl relative">
             {aboutData[4]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating(
-                    "aboutData",
-                    aboutData[4]?.id,
-                    "",
-                    fetchAboutData
-                  )
-                }
-                className="absolute hidden lg:block right-4 text-red-500 text-base"
+              <EditModal
+                fileName="aboutData"
+                id={aboutData[4]?.id}
+                refetchData={fetchAboutData}
               />
             )}
           </p>
@@ -129,16 +98,10 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
         <p className="ps-2 md:p-0 relative">
           {aboutData[5]?.text}
           {user && (
-            <FaRegEdit
-              onClick={() =>
-                handleUpdating(
-                  "aboutData",
-                  aboutData[5]?.id,
-                  "",
-                  fetchAboutData
-                )
-              }
-              className="absolute hidden lg:inline-block right-2 bottom-1 text-red-500"
+            <EditModal
+              fileName="aboutData"
+              id={aboutData[5]?.id}
+              refetchData={fetchAboutData}
             />
           )}
         </p>

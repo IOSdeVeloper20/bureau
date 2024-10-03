@@ -15,7 +15,7 @@ module.exports = {
         greenTitle: "#203908",
       },
       borderRadius: {
-        "4xl": "3.5rem", // Customize this value as needed
+        "4xl": "3.5rem",
       },
     },
   },

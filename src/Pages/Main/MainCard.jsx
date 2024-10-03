@@ -1,7 +1,6 @@
 import React from "react";
 import { FaBriefcase } from "react-icons/fa6";
-import { FaRegEdit } from "react-icons/fa";
-import { handleUpdating } from "../../Helpers/Updating";
+import EditModal from "../../Components/EditModal";
 
 const MainCard = ({ mainData, user, fetchMainData }) => {
   return (
@@ -11,11 +10,10 @@ const MainCard = ({ mainData, user, fetchMainData }) => {
         <h1 className="text-darkBlue text-base md:text-lg font-bold relative">
           {mainData[2]?.text}
           {user && (
-            <FaRegEdit
-              onClick={() =>
-                handleUpdating("mainData", mainData[2]?.id, "", fetchMainData)
-              }
-              className="absolute hidden lg:block right-11 text-red-500"
+            <EditModal
+              fileName="mainData"
+              id={mainData[2]?.id}
+              refetchData={fetchMainData}
             />
           )}
         </h1>
@@ -24,11 +22,10 @@ const MainCard = ({ mainData, user, fetchMainData }) => {
         <p className="relative">
           {mainData[3]?.text}
           {user && (
-            <FaRegEdit
-              onClick={() =>
-                handleUpdating("mainData", mainData[3]?.id, "", fetchMainData)
-              }
-              className="absolute hidden lg:inline-block right-10 top-0 text-red-500"
+            <EditModal
+              fileName="mainData"
+              id={mainData[3]?.id}
+              refetchData={fetchMainData}
             />
           )}
         </p>
@@ -36,44 +33,40 @@ const MainCard = ({ mainData, user, fetchMainData }) => {
           <li>
             {mainData[4]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating("mainData", mainData[4]?.id, "", fetchMainData)
-                }
-                className="absolute hidden lg:inline-block right-10 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[4]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </li>
           <li>
             {mainData[5]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating("mainData", mainData[5]?.id, "", fetchMainData)
-                }
-                className="absolute hidden lg:inline-block right-10 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[5]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </li>
           <li>
             {mainData[6]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating("mainData", mainData[6]?.id, "", fetchMainData)
-                }
-                className="absolute hidden lg:inline-block right-10 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[6]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </li>
           <li>
             {mainData[7]?.text}
             {user && (
-              <FaRegEdit
-                onClick={() =>
-                  handleUpdating("mainData", mainData[7]?.id, "", fetchMainData)
-                }
-                className="absolute hidden lg:inline-block right-10 text-red-500"
+              <EditModal
+                fileName="mainData"
+                id={mainData[7]?.id}
+                refetchData={fetchMainData}
               />
             )}
           </li>
@@ -81,11 +74,10 @@ const MainCard = ({ mainData, user, fetchMainData }) => {
         <p className="relative">
           {mainData[8]?.text}
           {user && (
-            <FaRegEdit
-              onClick={() =>
-                handleUpdating("mainData", mainData[8]?.id, "", fetchMainData)
-              }
-              className="absolute hidden lg:inline-block right-5 top-0 text-red-500"
+            <EditModal
+              fileName="mainData"
+              id={mainData[8]?.id}
+              refetchData={fetchMainData}
             />
           )}
         </p>
