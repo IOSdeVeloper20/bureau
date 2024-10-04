@@ -23,6 +23,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={Adnoc}
+              loading="lazy"
               alt="Adnnoc"
               className="size-3/6 sm:size-2/6 lg:size-1/2"
             />
@@ -30,6 +31,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={Enas}
+              loading="lazy"
               alt="Enas"
               className="size-3/2 sm:size-2/6 md:size-3/6 lg:size-5/6"
             />
@@ -37,6 +39,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={Muniplicity}
+              loading="lazy"
               alt="Muniplicity"
               className="size-3/2 sm:size-2/6 md:size-4/6 lg:size-5/6"
             />
@@ -44,6 +47,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={Rakez}
+              loading="lazy"
               alt="Rakez"
               className="size-3/6 sm:size-2/6 lg:size-1/2"
             />
@@ -51,6 +55,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={Leaa}
+              loading="lazy"
               alt="Leaa"
               className="size-3/6 sm:size-2/6 lg:size-1/2"
             />
@@ -61,6 +66,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={Iso}
+              loading="lazy"
               alt="Iso"
               className="size-5/6 sm:size-2/6 md:size-3/6 lg:size-4/6"
             />
@@ -68,6 +74,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={Actevet}
+              loading="lazy"
               alt="Actevet"
               className="size-5/6 sm:size-2/6 md:size-3/6 lg:size-4/6"
             />
@@ -75,6 +82,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={Ipaf}
+              loading="lazy"
               alt="Ipaf"
               className="size-5/6 sm:size-2/6 md:size-3/6 lg:size-4/6"
             />
@@ -82,6 +90,7 @@ const ApprovalHeader = () => {
           <div className="flex justify-center">
             <img
               src={EtihadLogo}
+              loading="lazy"
               alt="Etihad Logo"
               className="size-5/6 sm:size-2/6 md:size-3/6 lg:size-4/6"
             />

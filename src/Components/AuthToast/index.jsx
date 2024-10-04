@@ -7,13 +7,14 @@ const AuthToast = ({ login, description }) => {
     if (login != null) {
       toast({
         title: login ? "Login Successed" : "Login Failed",
-        description: login ? description : "Please check your credentials.",
+        description: description,
         status: login ? "success" : "error",
+        position: "bottom-right",
         duration: 5000,
         isClosable: true,
       });
     }
-  }, [login]);
+  }, [login, description, toast]);
   return null;
 };
 

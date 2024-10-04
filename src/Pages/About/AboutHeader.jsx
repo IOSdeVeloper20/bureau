@@ -39,6 +39,7 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
         <div className="col-span-2 flex justify-center">
           <img
             src={Shipment}
+            loading="lazy"
             alt="Shipment"
             className="rounded-3xl md:w-1/2 lg:w-full"
           />
@@ -47,7 +48,12 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
 
       <div className="grid grid-cols-1 gap-2  lg:grid-cols-3">
         <div className="flex justify-center">
-          <img src={Saleh} alt="Saleh" className="lg:h-full lg:w-4/6" />
+          <img
+            src={Saleh}
+            loading="lazy"
+            alt="Saleh"
+            className="lg:h-full lg:w-4/6"
+          />
         </div>
 
         <div className="flex justify-center items-center md:items-start gap-4">
@@ -78,7 +84,12 @@ const AboutHeader = ({ aboutData, user, fetchAboutData }) => {
 
       <div className="grid grid-cols-1 gap-2  lg:grid-cols-3">
         <div className="flex justify-center">
-          <img src={Abosad} alt="Abosad" className="lg:h-full lg:w-4/6" />
+          <img
+            src={Abosad}
+            loading="lazy"
+            alt="Abosad"
+            className="lg:h-full lg:w-4/6"
+          />
         </div>
 
         <div className="flex justify-center items-center md:items-start gap-4">

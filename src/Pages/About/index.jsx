@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import AboutHeader from "./AboutHeader";
 import AboutMiddle from "./AboutMiddle";
 import AboutBottom from "./AboutBottom";
 import { fetchData } from "../../Helpers/Networking";
+import { UserContext } from "../../Contexts/UserContext";
 
 const About = () => {
   const [aboutData, setAboutData] = useState([]);
-  const user = true;
+  const { userState } = useContext(UserContext);
 
   const fetchAboutData = async () => {
-    const baseUrl = "http://localhost:5001/get/aboutData";
-    const aboutResponse = await fetchData(baseUrl);
+    const aboutUrl = process.env.REACT_APP_ABOUT_BASE_URL;
+    const aboutResponse = await fetchData(aboutUrl);
     setAboutData(aboutResponse);
   };
 
@@ -26,19 +27,19 @@ const About = () => {
       <Navbar />
       <AboutHeader
         aboutData={aboutData}
-        user={user}
+        user={userState}
         fetchAboutData={fetchAboutData}
       />
       <div className="flex justify-center p-4">
         <AboutMiddle
           aboutData={aboutData}
-          user={user}
+          user={userState}
           fetchAboutData={fetchAboutData}
         />
       </div>
       <AboutBottom
         aboutData={aboutData}
-        user={user}
+        user={userState}
         fetchAboutData={fetchAboutData}
       />
       <Footer />

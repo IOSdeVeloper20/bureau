@@ -9,6 +9,7 @@ const InspectionsHeader = ({ inspectionsData, user, fetchInspectionData }) => {
         <div className="w-full relative">
           <img
             src={GreenKrane}
+            loading="lazy"
             alt="yellow gas"
             className="rounded-3xl lg:h-screen w-full"
           />

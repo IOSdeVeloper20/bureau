@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { IoMdLogOut } from "react-icons/io";
+import { UserContext } from "../../Contexts/UserContext";
 
 const NavLinks = ({ linkActive, linkInActive }) => {
+  const { userState, setUserState } = useContext(UserContext);
+
+  const handleSignOut = () => {
+    setUserState(false);
+    localStorage.removeItem("authToken");
+  };
+
   return (
     <>
       <NavLink
         to="/"
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
-        } >
+        }>
         Company Profile
       </NavLink>
 
@@ -59,6 +68,15 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         }>
         Contact Us
       </NavLink>
+
+      {userState && (
+        <button
+          onClick={handleSignOut}
+          className="text-red-400 flex items-center font-semibold">
+          <IoMdLogOut />
+          Log out
+        </button>
+      )}
     </>
   );
 };

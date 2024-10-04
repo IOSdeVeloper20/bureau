@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import MainHeader from "./MainHeader";
 import MainCard from "./MainCard";
 import MainBottom from "./MainBottom";
 import { fetchData } from "../../Helpers/Networking";
+import { UserContext } from "../../Contexts/UserContext";
 
 const Main = () => {
   const [mainData, setMainData] = useState([]);
-  const user = true;
+  const { userState } = useContext(UserContext);
 
   const fetchMainData = async () => {
-    const baseUrl = "http://localhost:5001/get/mainData";
-    const mainResponse = await fetchData(baseUrl);
+    const mainUrl = process.env.REACT_APP_MAIN_BASE_URL
+    const mainResponse = await fetchData(mainUrl);
     setMainData(mainResponse);
   };
 
@@ -24,11 +25,23 @@ const Main = () => {
   return (
     <div>
       <Navbar />
-      <MainHeader mainData={mainData} user={user} fetchMainData={fetchMainData}/>
+      <MainHeader
+        mainData={mainData}
+        user={userState}
+        fetchMainData={fetchMainData}
+      />
       <div className="flex justify-center p-4">
-        <MainCard mainData={mainData} user={user} fetchMainData={fetchMainData} />
+        <MainCard
+          mainData={mainData}
+          user={userState}
+          fetchMainData={fetchMainData}
+        />
       </div>
-      <MainBottom mainData={mainData} user={user} fetchMainData={fetchMainData} />
+      <MainBottom
+        mainData={mainData}
+        user={userState}
+        fetchMainData={fetchMainData}
+      />
       <Footer />
     </div>
   );

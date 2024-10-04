@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import InspectionsHeader from "./InspectionsHeader";
 import InspectionsBottom from "./InspectionsBottom";
 import InspectionsMiddle from "./InspectionsMiddle";
 import { fetchData } from "../../Helpers/Networking";
+import { UserContext } from "../../Contexts/UserContext";
 
 const Inspections = () => {
   const [inspectionsData, setInspectionsData] = useState([]);
-  const user = true;
+  const {userState} = useContext(UserContext);
 
   const fetchInspectionData = async () => {
-    const baseUrl = "http://localhost:5001/get/inspectionsData";
-    const inspectionsResponse = await fetchData(baseUrl);
+    const inspectionsUrl = process.env.REACT_APP_INSPECTIONS_BASE_URL;
+    const inspectionsResponse = await fetchData(inspectionsUrl);
     setInspectionsData(inspectionsResponse);
   };
 
@@ -26,13 +27,13 @@ const Inspections = () => {
       <Navbar />
       <InspectionsHeader
         inspectionsData={inspectionsData}
-        user={user}
+        user={userState}
         fetchInspectionData={fetchInspectionData}
       />
       <div className="flex justify-center">
         <InspectionsMiddle
           inspectionsData={inspectionsData}
-          user={user}
+          user={userState}
           fetchInspectionData={fetchInspectionData}
         />
       </div>

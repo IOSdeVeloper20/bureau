@@ -38,6 +38,7 @@ const InspectionsMiddle = ({ inspectionsData, user, fetchInspectionData }) => {
         <div className="col-span-1 w-10/12 flex justify-center">
           <img
             src={Boxing}
+            loading="lazy"
             alt="Boxing"
             className="hidden rounded-3xl w-2/3 lg:inline-block"
           />

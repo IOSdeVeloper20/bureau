@@ -117,7 +117,12 @@ const AboutBottom = ({ aboutData, user, fetchAboutData }) => {
               )}
             </li>
           </ul>
-          <img src={KraneSeaPort} alt="Krane SeaPort" className="col-span-1" />
+          <img
+            src={KraneSeaPort}
+            loading="lazy"
+            alt="Krane SeaPort"
+            className="col-span-1"
+          />
         </div>
       </div>
     </div>

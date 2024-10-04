@@ -7,6 +7,7 @@ const TrainingBottom = () => {
       <div className="lg:w-11/12 flex justify-center lg:h-80">
         <img
           src={Teacher}
+          loading="lazy"
           alt="Teacher"
           className="rounded-4xl w-full object-cover"
         />

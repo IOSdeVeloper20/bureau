@@ -13,6 +13,7 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
         <div className="lg:col-span-1 flex flex-col items-center text-center">
           <img
             src={Submarine}
+            loading="lazy"
             alt="submarine"
             className="rounded-3xl sm:size-4/6 md:size-3/5 lg:size-full"
           />
@@ -57,7 +58,12 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-start items-start">
         <div className="text-center p-4">
           <div className="h-1/4">
-            <img src={Krane} alt="krane" className="rounded-3xl" />
+            <img
+              src={Krane}
+              loading="lazy"
+              alt="krane"
+              className="rounded-3xl"
+            />
           </div>
           <h1 className="text-darkBlue text-xl font-bold pt-2">
             Office Facilities
@@ -76,7 +82,12 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
 
         <div className="text-center p-4">
           <div className="h-1/4">
-            <img src={GreenWroker} alt="Green Worker" className="rounded-3xl" />
+            <img
+              src={GreenWroker}
+              loading="lazy"
+              alt="Green Worker"
+              className="rounded-3xl"
+            />
           </div>
           <h1 className="text-darkBlue text-xl font-bold pt-2">
             Work Experience
@@ -95,7 +106,12 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
 
         <div className="text-center p-4">
           <div className="h-1/4">
-            <img src={GreenKrane} alt="Green Krane" className="rounded-3xl" />
+            <img
+              src={GreenKrane}
+              loading="lazy"
+              alt="Green Krane"
+              className="rounded-3xl"
+            />
           </div>
           <h1 className="text-darkBlue text-xl font-bold pt-4">
             Quality & HSE
@@ -114,7 +130,12 @@ const MainBottom = ({ mainData, user, fetchMainData }) => {
 
         <div className="text-center p-4">
           <div className="h-40 lg:h-32 xl:h-40 flex justify-center">
-            <img src={Etihad} alt="Etihad" className="rounded-3xl h-full" />
+            <img
+              src={Etihad}
+              loading="lazy"
+              alt="Etihad"
+              className="rounded-3xl h-full"
+            />
           </div>
           <h1 className="text-darkBlue text-xl font-bold pt-5">
             Over all highlights

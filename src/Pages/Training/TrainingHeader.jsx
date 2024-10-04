@@ -9,6 +9,7 @@ const TrainingTop = ({ trainingData, user, fetchTrainingData }) => {
         <div className="w-full relative">
           <img
             src={Scaffolding}
+            loading="lazy"
             alt="Scaffolding"
             className="rounded-3xl lg:h-screen w-full"
           />

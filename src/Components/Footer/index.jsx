@@ -11,7 +11,6 @@ import {
 } from "react-icons/io5";
 
 const Footer = () => {
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -34,6 +33,7 @@ const Footer = () => {
           <img
             src={whiteLogo}
             alt="Logo Icon"
+            loading="lazy"
             className=" items-center size-2/4 md:size-1/2"
           />
         </div>

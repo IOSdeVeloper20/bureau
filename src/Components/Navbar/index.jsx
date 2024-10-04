@@ -27,33 +27,30 @@ const Navbar = () => {
       <div className="w-full flex justify-between flex-wrap text-sm">
         <div className="w-1/2 flex items-center md:w-1/4">
           <Link to="/">
-            <img src={Logo} alt="Logo" className="p-2" />
+            <img src={Logo} loading="lazy" alt="Logo" className="p-2" />
           </Link>
         </div>
-  
+
         <div className="w-3/4 justify-evenly items-center hidden xl:flex">
-          <NavLinks
-            linkActive={"font-black"}
-            linkInActive={"text-darkBlue"}
-          />
+          <NavLinks linkActive={"font-black"} linkInActive={"text-darkBlue"} />
         </div>
-  
+
         <div
           className="flex items-center pe-4 text-xl xl:hidden"
           onClick={toggleNavbar}>
           {isOpen ? <IoCloseSharp /> : <IoMenuSharp />}
         </div>
-  
+
         {isOpen ? (
           <div className="w-full flex flex-col items-center gap-2">
-            <NavLinks linkActive={"font-bold"}/>
+            <NavLinks linkActive={"font-bold"} />
           </div>
         ) : (
           ""
         )}
       </div>
       <div className="flex text-lightBlue justify-end items-center pe-4 lg:pe-12 py-4">
-        <Social hoverColor={"hover:text-slate-400"}/>
+        <Social hoverColor={"hover:text-slate-400"} />
       </div>
     </div>
   );

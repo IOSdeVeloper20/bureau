@@ -10,7 +10,12 @@ const GalleryBody = () => {
     <div className="p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-4">
         <div className="text-center">
-          <img src={BoxingCranne} alt="Ship" className="rounded-3xl aspect-square" />
+          <img
+            src={BoxingCranne}
+            loading="lazy"
+            alt="Ship"
+            className="rounded-3xl aspect-square"
+          />
           <h1 className="text-xs pt-4 md:text-base md:font-bold">
             ADNOC Vessel mid ship crane load testing
           </h1>
@@ -18,11 +23,13 @@ const GalleryBody = () => {
         <div className="text-center">
           <img
             src={Ton}
+            loading="lazy"
             alt="Docking Yard"
             className="rounded-3xl aspect-square"
           />
           <h1 className="text-xs pt-4 md:text-base md:font-bold">
-            Proof load testing of lifting frame 500 ton          </h1>
+            Proof load testing of lifting frame 500 ton{" "}
+          </h1>
         </div>
       </div>
 
@@ -30,6 +37,7 @@ const GalleryBody = () => {
         <div className="lg:h-96 lg:w-10/12">
           <img
             src={Factory}
+            loading="lazy"
             alt="Factory"
             className="w-full h-full rounded-3xl"
           />
@@ -41,7 +49,12 @@ const GalleryBody = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-4">
         <div className="text-center">
-          <img src={Ship} alt="Ship" className="rounded-3xl aspect-square" />
+          <img
+            src={Ship}
+            loading="lazy"
+            alt="Ship"
+            className="rounded-3xl aspect-square"
+          />
           <h1 className="text-xs pt-4 md:text-base md:font-bold">
             ADNOC Vessel embarkation ladder load testing
           </h1>
@@ -49,6 +62,7 @@ const GalleryBody = () => {
         <div className="text-center">
           <img
             src={DockingYard}
+            loading="lazy"
             alt="Docking Yard"
             className="rounded-3xl aspect-square"
           />

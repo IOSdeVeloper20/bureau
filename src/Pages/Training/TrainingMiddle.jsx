@@ -108,6 +108,7 @@ const TrainingMiddle = ({ trainingData, user, fetchTrainingData }) => {
       <div className="w-full lg:w-1/2 flex items-center justify-center">
         <img
           src={BlueWorker}
+          loading="lazy"
           alt="Blue Worker"
           className="rounded-3xl h-full"
         />

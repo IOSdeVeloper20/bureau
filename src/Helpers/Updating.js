@@ -1,5 +1,5 @@
 export const updateData = async (textID, file, updatedText) => {
-  const updatingBaseUrl = `http://localhost:5001/update/${file}/${textID}`;
+  const updatingBaseUrl = `${process.env.REACT_APP_UPDATING_BASE_URL}${file}/${textID}`;
   if (textID && updatedText) {
     try {
       const response = await fetch(updatingBaseUrl, {

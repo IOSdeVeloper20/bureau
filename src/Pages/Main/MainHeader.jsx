@@ -8,7 +8,12 @@ const MainHeader = ({ mainData, user, fetchMainData }) => {
     <div className="bg-greyBackground rounded-4xl flex flex-col justify-center items-center">
       <div className="w-11/12">
         <div className="relative">
-          <img src={yellowGas} alt="yellow gas" className="rounded-3xl" />
+          <img
+            src={yellowGas}
+            loading="lazy"
+            alt="yellow gas"
+            className="rounded-3xl"
+          />
           <div className="absolute top-2 lg:top-6 right-3 lg:right-8">
             <h1 className="hidden text-greenTitle text-xs lg:inline-block lg:text-4xl font-medium lg:font-bold">
               Industry Experts in,
