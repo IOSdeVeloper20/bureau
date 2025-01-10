@@ -3,22 +3,22 @@ import { UserContext } from "../../Contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import { LangContext } from "../../Contexts/LangContext";
 import { TbLogout2 } from "react-icons/tb";
+import { UseLogout } from "../../Hooks/UseLogout";
 
-const LogoutButton = ({className}) => {
+const LogoutButton = ({ className }) => {
   const { setUserState } = useContext(UserContext);
   const navigate = useNavigate();
   const { langState } = useContext(LangContext);
+  const logout = UseLogout();
 
-  const handleSignOut = () => {
-    setUserState(false);
-    sessionStorage.removeItem("authToken");
-    navigate("/");
-  };
+  // const handleSignOut = () => {
+  //   setUserState(false);
+  //   sessionStorage.removeItem("authToken");
+  //   navigate("/");
+  // };
 
   return (
-    <button
-      onClick={handleSignOut}
-      className={`${className}`}>
+    <button onClick={logout} className={`${className}`}>
       <TbLogout2 />
       {langState === "en" ? "Log out" : "تسجيل الخروج"}
     </button>

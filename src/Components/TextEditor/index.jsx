@@ -85,7 +85,7 @@ const TextEditor = ({ fileName, id }) => {
       <div className="flex justify-end items-center">
         <button
           onClick={handleUpdateButton}
-          className="bg-cyan-700 w-4/12 md:w-3/12 xl:w-2/12 px-3 py-1.5 text-white text-sm font-bold rounded-full">
+          className="bg-cyan-700 w-5/12 md:w-3/12 xl:w-2/12 px-3 py-1.5 text-white text-sm font-bold rounded-full">
           {langState === "en" ? "Update" : "تحديث"}
         </button>
       </div>
