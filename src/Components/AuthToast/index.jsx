@@ -1,20 +1,20 @@
 import { useToast } from "@chakra-ui/react";
 import { useEffect } from "react";
 
-const AuthToast = ({ login, description }) => {
+const AuthToast = ({ status, description, title, position }) => {
   const toast = useToast();
   useEffect(() => {
-    if (login != null) {
+    if (status != null) {
       toast({
-        title: login ? "Login Successed" : "Login Failed",
+        title: title,
         description: description,
-        status: login ? "success" : "error",
-        position: "bottom-right",
+        status: status, // "success", "error", "info", "warning"
+        position: position,
         duration: 5000,
-        isClosable: true,
+        isClosable: false,
       });
     }
-  }, [login, description, toast]);
+  }, [status, description, position, title, toast]);
   return null;
 };
 

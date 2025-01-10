@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import whiteLogo from "../../Assets/Images/white_logo.png";
 import NavLinks from "../Navlinks";
 import { BsGeoAlt } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
 import Social from "../Social";
+import { fetchData } from "../../Helpers/Networking";
+import { LangContext } from "../../Contexts/LangContext";
 import {
   IoMailOpenOutline,
   IoMailOutline,
@@ -11,6 +13,19 @@ import {
 } from "react-icons/io5";
 
 const Footer = () => {
+  const [footerData, setFooterData] = useState([]);
+  const { langState } = useContext(LangContext);
+
+  const fetchFooterData = async () => {
+    const footerUrl = process.env.REACT_APP_FOOTER_BASE_URL;
+    const footerResponse = await fetchData(footerUrl);
+    setFooterData(footerResponse);
+  };
+
+  useEffect(() => {
+    fetchFooterData();
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -42,22 +57,30 @@ const Footer = () => {
           <ul>
             <li className="flex items-center gap-2">
               <BsGeoAlt />
-              <p>Arabian Bureau of Services</p>
+              <p>
+                {langState === "en"
+                  ? footerData[0]?.text
+                  : footerData[0]?.arText}
+              </p>
             </li>
             <li className="flex items-center gap-2">
               <IoMailOpenOutline />
-              <p>P.O.Box 47133 - Musaffah</p>
+              <p>{footerData[1]?.text}</p>
             </li>
             <li className="flex items-center gap-2">
               <FiPhoneCall />
               <p>
-                <a href="tel:+97125511520">Tel: +971 2 5511520</a>
+                <a href={`tel:${footerData[2]?.text}`}>
+                  Tel: {footerData[2]?.text}
+                </a>
               </p>
             </li>
             <li className="flex items-center gap-2">
               <IoMailOutline />
               <p>
-                <a href="mailto:abos@abosad.com">Email: abos@abosad.com</a>
+                <a href={`mailto:${footerData[3]?.text}`}>
+                  Email: {footerData[3]?.text}
+                </a>
               </p>
             </li>
           </ul>
@@ -68,7 +91,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-xs md:text-sm text-center p-2 text-slate-400">
-        <p>&copy; Copyright Rimel 2024 All right reserved</p>
+        {langState === "en" ? (
+          <p>&copy; Copyright Rimel 2024 All right reserved</p>
+        ) : (
+          <p>&copy; جميع الحقوق محفوظة لشركة ريميل 2024</p>
+        )}
       </div>
     </div>
   );

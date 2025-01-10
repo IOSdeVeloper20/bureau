@@ -1,5 +1,5 @@
-export const updateData = async (textID, file, updatedText) => {
-  const updatingBaseUrl = `${process.env.REACT_APP_UPDATING_BASE_URL}${file}/${textID}`;
+export const updateData = async (textID, file, updatedText, langState) => {
+  const updatingBaseUrl = `${process.env.REACT_APP_UPDATING_BASE_URL}${file}/${textID}/${langState}`;
   if (textID && updatedText) {
     try {
       const response = await fetch(updatingBaseUrl, {
@@ -20,11 +20,9 @@ export const updateData = async (textID, file, updatedText) => {
   }
 };
 
-export const handleUpdating = async (fileName, id, newText, refetchData) => {
+export const handleUpdating = async (fileName, id, newText, langState) => {
   try {
-    const result = await updateData(id, fileName, { text: newText });
-    console.log(result.message);
-    refetchData();
+    await updateData(id, fileName, { text: newText }, langState);
   } catch (error) {
     console.error("Update failed:", error);
   }

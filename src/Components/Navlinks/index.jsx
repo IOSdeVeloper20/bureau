@@ -1,15 +1,9 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { IoMdLogOut } from "react-icons/io";
-import { UserContext } from "../../Contexts/UserContext";
+import { LangContext } from "../../Contexts/LangContext";
 
 const NavLinks = ({ linkActive, linkInActive }) => {
-  const { userState, setUserState } = useContext(UserContext);
-
-  const handleSignOut = () => {
-    setUserState(false);
-    localStorage.removeItem("authToken");
-  };
+  const { langState } = useContext(LangContext);
 
   return (
     <>
@@ -18,7 +12,7 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
         }>
-        Company Profile
+        {langState === "en" ? "Company Profile" : "نبذة عن الشركة"}
       </NavLink>
 
       <NavLink
@@ -26,7 +20,7 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
         }>
-        About
+        {langState === "en" ? "About" : "عن الشركة"}
       </NavLink>
 
       <NavLink
@@ -34,7 +28,7 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
         }>
-        Inspections
+        {langState === "en" ? "Inspections" : "الفحوصات"}
       </NavLink>
 
       <NavLink
@@ -42,7 +36,7 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
         }>
-        Training
+        {langState === "en" ? "Training" : "التدريب"}
       </NavLink>
 
       <NavLink
@@ -50,7 +44,7 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
         }>
-        Approvals
+        {langState === "en" ? "Approvals" : "الموافقات"}
       </NavLink>
 
       <NavLink
@@ -58,7 +52,7 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
         }>
-        Gallery
+        {langState === "en" ? "Gallery" : "المعرض"}
       </NavLink>
 
       <NavLink
@@ -66,17 +60,8 @@ const NavLinks = ({ linkActive, linkInActive }) => {
         className={({ isActive }) =>
           isActive ? `${linkActive}` : `${linkInActive}`
         }>
-        Contact Us
+        {langState === "en" ? "Contact Us" : "اتصل بنا"}
       </NavLink>
-
-      {userState && (
-        <button
-          onClick={handleSignOut}
-          className="text-red-400 flex items-center font-semibold">
-          <IoMdLogOut />
-          Log out
-        </button>
-      )}
     </>
   );
 };
